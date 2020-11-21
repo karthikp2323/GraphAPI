@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CTLSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Inv_UserSecurities">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="16" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="15" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvalidLogins" Type="int" Nullable="false" />
+          <Property Name="Locked" Type="bit" Nullable="false" />
+          <Property Name="SessionId" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="PasswordChangedBy" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="IsSupplier" Type="bit" Nullable="false" />
+          <Property Name="Guid" Type="uniqueidentifier" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsLogin" Type="bit" Nullable="false" />
+          <Property Name="LastLogin" Type="datetime" Nullable="false" />
+          <Property Name="SecurityQuestion" Type="nvarchar(max)" />
+          <Property Name="SecurityAnswer" Type="nvarchar(max)" />
+          <Property Name="Last_password1" Type="nvarchar(max)" />
+          <Property Name="Last_password2" Type="nvarchar(max)" />
+          <Property Name="Last_password3" Type="nvarchar(max)" />
+          <Property Name="Force_change_password" Type="bit" />
+          <Property Name="PasswordUpdate" Type="datetime" />
+          <Property Name="PasswordCounter" Type="nvarchar" MaxLength="50" />
+          <Property Name="TemperNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="TemperUrl" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsEloActiveUser" Type="bit" />
+          <Property Name="DocumentName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DocumentUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="InActiveDate" Type="datetime" />
+          <Property Name="ReActiveDate" Type="datetime" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="JobDescription" Type="nvarchar(max)" />
+          <Property Name="UserSecurityImageId" Type="int" />
+          <Property Name="DohUsers" Type="bit" Nullable="false" />
+          <Property Name="TopwaReport" Type="bit" Nullable="false" />
+          <Property Name="IsLoginBypass" Type="bit" Nullable="false" />
+          <Property Name="UserClaimsObjectId" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActiveNotice" Type="int" />
+          <Property Name="IsInviteSent" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CTLSModelStoreContainer">
+          <EntitySet Name="Inv_UserSecurities" EntityType="Self.Inv_UserSecurities" Schema="CTLS" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CTLSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Inv_UserSecurities">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InvalidLogins" Type="Int32" Nullable="false" />
+          <Property Name="Locked" Type="Boolean" Nullable="false" />
+          <Property Name="SessionId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordChangedBy" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsSupplier" Type="Boolean" Nullable="false" />
+          <Property Name="Guid" Type="Guid" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsLogin" Type="Boolean" Nullable="false" />
+          <Property Name="LastLogin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SecurityQuestion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_password1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_password2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_password3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Force_change_password" Type="Boolean" />
+          <Property Name="PasswordUpdate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordCounter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TemperNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TemperUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsEloActiveUser" Type="Boolean" />
+          <Property Name="DocumentName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DocumentUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="InActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="ReActiveDate" Type="DateTime" Precision="3" />
+          <Property Name="JobTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserSecurityImageId" Type="Int32" />
+          <Property Name="DohUsers" Type="Boolean" Nullable="false" />
+          <Property Name="TopwaReport" Type="Boolean" Nullable="false" />
+          <Property Name="IsLoginBypass" Type="Boolean" Nullable="false" />
+          <Property Name="UserClaimsObjectId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveNotice" Type="Int32" />
+          <Property Name="IsInviteSent" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CTLSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Inv_UserSecurities" EntityType="Self.Inv_UserSecurities" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CTLSModelStoreContainer" CdmEntityContainer="CTLSEntities">
+          <EntitySetMapping Name="Inv_UserSecurities">
+            <EntityTypeMapping TypeName="CTLSModel.Inv_UserSecurities">
+              <MappingFragment StoreEntitySet="Inv_UserSecurities">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="InvalidLogins" ColumnName="InvalidLogins" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PasswordChangedBy" ColumnName="PasswordChangedBy" />
+                <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+                <ScalarProperty Name="SecurityAnswer" ColumnName="SecurityAnswer" />
+                <ScalarProperty Name="Last_password1" ColumnName="Last_password1" />
+                <ScalarProperty Name="Last_password2" ColumnName="Last_password2" />
+                <ScalarProperty Name="Last_password3" ColumnName="Last_password3" />
+                <ScalarProperty Name="Force_change_password" ColumnName="Force_change_password" />
+                <ScalarProperty Name="PasswordUpdate" ColumnName="PasswordUpdate" />
+                <ScalarProperty Name="PasswordCounter" ColumnName="PasswordCounter" />
+                <ScalarProperty Name="TemperNumber" ColumnName="TemperNumber" />
+                <ScalarProperty Name="TemperUrl" ColumnName="TemperUrl" />
+                <ScalarProperty Name="IsEloActiveUser" ColumnName="IsEloActiveUser" />
+                <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+                <ScalarProperty Name="DocumentUrl" ColumnName="DocumentUrl" />
+                <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+                <ScalarProperty Name="ReActiveDate" ColumnName="ReActiveDate" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="UserSecurityImageId" ColumnName="UserSecurityImageId" />
+                <ScalarProperty Name="DohUsers" ColumnName="DohUsers" />
+                <ScalarProperty Name="TopwaReport" ColumnName="TopwaReport" />
+                <ScalarProperty Name="IsLoginBypass" ColumnName="IsLoginBypass" />
+                <ScalarProperty Name="UserClaimsObjectId" ColumnName="UserClaimsObjectId" />
+                <ScalarProperty Name="ActiveNotice" ColumnName="ActiveNotice" />
+                <ScalarProperty Name="IsInviteSent" ColumnName="IsInviteSent" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

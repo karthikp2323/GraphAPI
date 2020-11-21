@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CTLSModelStoreContainer" CdmEntityContainer="CTLSEntities">
+    <EntitySetMapping Name="Inv_UserSecurities">
+      <EntityTypeMapping TypeName="CTLSModel.Inv_UserSecurities">
+        <MappingFragment StoreEntitySet="Inv_UserSecurities">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="InvalidLogins" ColumnName="InvalidLogins" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PasswordChangedBy" ColumnName="PasswordChangedBy" />
+          <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+          <ScalarProperty Name="SecurityAnswer" ColumnName="SecurityAnswer" />
+          <ScalarProperty Name="Last_password1" ColumnName="Last_password1" />
+          <ScalarProperty Name="Last_password2" ColumnName="Last_password2" />
+          <ScalarProperty Name="Last_password3" ColumnName="Last_password3" />
+          <ScalarProperty Name="Force_change_password" ColumnName="Force_change_password" />
+          <ScalarProperty Name="PasswordUpdate" ColumnName="PasswordUpdate" />
+          <ScalarProperty Name="PasswordCounter" ColumnName="PasswordCounter" />
+          <ScalarProperty Name="TemperNumber" ColumnName="TemperNumber" />
+          <ScalarProperty Name="TemperUrl" ColumnName="TemperUrl" />
+          <ScalarProperty Name="IsEloActiveUser" ColumnName="IsEloActiveUser" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentUrl" ColumnName="DocumentUrl" />
+          <ScalarProperty Name="InActiveDate" ColumnName="InActiveDate" />
+          <ScalarProperty Name="ReActiveDate" ColumnName="ReActiveDate" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="UserSecurityImageId" ColumnName="UserSecurityImageId" />
+          <ScalarProperty Name="DohUsers" ColumnName="DohUsers" />
+          <ScalarProperty Name="TopwaReport" ColumnName="TopwaReport" />
+          <ScalarProperty Name="IsLoginBypass" ColumnName="IsLoginBypass" />
+          <ScalarProperty Name="UserClaimsObjectId" ColumnName="UserClaimsObjectId" />
+          <ScalarProperty Name="ActiveNotice" ColumnName="ActiveNotice" />
+          <ScalarProperty Name="IsInviteSent" ColumnName="IsInviteSent" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
