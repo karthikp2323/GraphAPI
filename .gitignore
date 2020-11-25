@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/AzureActiveDirectory
+/AzureActiveDirectory/bin/Debug
+/AzureActiveDirectory/obj/Debug
