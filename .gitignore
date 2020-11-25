@@ -5,3 +5,5 @@
 /.vs/AzureActiveDirectory
 /AzureActiveDirectory/bin/Debug
 /AzureActiveDirectory/obj/Debug
+/EFCoreDemoDAL/bin/Debug/netcoreapp3.1
+/EFCoreDemoDAL/obj
