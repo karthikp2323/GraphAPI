@@ -20,11 +20,12 @@ namespace AzureActiveDirectory
         public async Task<string> GetToken()
         {
             //  Constants
-            var tenant = "28cd8f80-3c44-4b27-81a0-cd2b03a31b8d";
-            var clientID = "f70d1b8f-ef59-4daa-8eb4-5672b40016cf";
+            var tenant = "tenent id"; // from azure portal
+            var clientID = "client id"; // from azure portal
             var resource = "https://graph.microsoft.com/";
-            var secret = "0u0ayUdN_Y--7MEFP54scx~W3lU~-yBGrj";
+            var secret = "your secret key"; // from azure portal
             var token = string.Empty;
+            var userObjectId = "user guid id";
             using (var webClient = new WebClient())
             {
                 var requestParameters = new NameValueCollection();
@@ -46,15 +47,12 @@ namespace AzureActiveDirectory
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                //https://graph.microsoft.com/v1.0/users/karthik.polina@flhealth.gov
-                userStatus = await client.GetStringAsync($"https://graph.microsoft.com/v1.0/users/86962aac-298a-4a0b-8f98-f8e6c341e593/externalUserState");
+                //https://graph.microsoft.com/v1.0/users/useremailid
+                userStatus = await client.GetStringAsync($"https://graph.microsoft.com/v1.0/users/userObjectId/externalUserState");
             }
 
             string[] azureUserStatus = userStatus.Split(new char[] { '{', '"', ',', ':', '}' }, StringSplitOptions.RemoveEmptyEntries);
             return await Task.FromResult(azureUserStatus[azureUserStatus.Length - 1].ToString()); 
-
-           
-
 
         }
 
